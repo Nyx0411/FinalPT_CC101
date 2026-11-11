@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: darkslategray;
+  line-height: 1.6;
+}
+
+header {
+  background-color: indigo;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 5px 10px;
+  padding: 6px 12px;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  background-color: indigo;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+section {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid white;
+}
+
+h2 {
+  color: indigo;
+  border-bottom: 2px solid indigo;
+  padding-bottom: 5px;
+}
+
+.profile {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid white;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: indigo;
+  color: white;
+}
+
+pre {
+  background-color: lightslategray;
+  color: white;
+  padding: 15px;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+footer {
+  background-color: indigo;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>PHYNX B. GABRIEL</h1>
+    <p>Aspiring Junior Programmer</p>
+    <nav>
+      <a href="#personal">Personal Information</a>
+      <a href="#education">Educational Background</a>
+      <a href="#skills">Skills</a>
+      <a href="#java">Java Code</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="personal">
+      <h2>Personal Information</h2>
+      <img src="c:\Users\Phynx\OneDrive\Pictures\846319694_1090208503854582_8231467956973762728_n.jpg" alt="My photo" class="profile">
+      <p><strong>Name:</strong> Phynx B. Gabriel</p>
+      <p><strong>Address:</strong> Talugtug, Nueva Ecija</p>
+      <p><strong>Email:</strong> phynxgabriel04@gmail.com</p>
+      <p><strong>Phone:</strong> 0948 747 7895</p>
+      <h3>About Me</h3>
+      <p>
+        I am a BS Information Technology student at Our Lady of the Sacred
+        Heart College of Guimba, Inc. I enjoy learning how to code and I am
+        applying for the Junior Programmer position at JPCS Inc.
+      </p>
+    </section>
+
+    <section id="education">
+      <h2>Educational Background</h2>
+      <table>
+        <tr>
+          <th>Level</th>
+          <th>School</th>
+          <th>Year</th>
+        </tr>
+        <tr>
+          <td>College</td>
+          <td>Our Lady of the Sacred Heart College of Guimba, Inc. (BSIT)</td>
+          <td>2026 - Present</td>
+        </tr>
+        <tr>
+          <td>Senior High School</td>
+          <td>Talugtug National High School</td>
+          <td>2024 - 2025</td>
+        </tr>
+        <tr>
+          <td>Junior High School</td>
+          <td>Talugtug National High School</td>
+          <td>2020 - 2023</td>
+        </tr>
+        <tr>
+          <td>Elementary</td>
+          <td>Talugtug East Central School</td>
+          <td>2017 - 2019</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <h3>Technical Skills</h3>
+      <ul>
+        <li>HTML and CSS</li>
+        <li>Java Programming (Console Applications)</li>
+        <li>GitHub (Repositories)</li>
+      </ul>
+      <h3>Other Competencies</h3>
+      <ul>
+        <li>Problem solving</li>
+        <li>Teamwork</li>
+      </ul>
+    </section>
+
+    <section id="java">
+      <h2>Java Code</h2>
+      <p>
+        <strong>CC102 Final Performance Task (PeTa):</strong>
+      </p>
+      <pre><code>import java.util.Scanner;
+import java.util.Random;
+
+public class NumberGame {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        Random random = new Random();
+        int secret = random.nextInt(100) + 1;
+        int guess = 0;
+        int tries = 0;
+
+        System.out.println("Guess the number (1-100)!");
+
+        while (guess != secret) {
+            System.out.print("Your guess: ");
+            guess = input.nextInt();
+            tries++;
+
+            if (guess < secret) {
+                System.out.println("Too low!");
+            } else if (guess > secret) {
+                System.out.println("Too high!");
+            } else {
+                System.out.println("Correct! Tries: " + tries);
+            }
+        }
+    }
+}</code></pre>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>BUILD DREAMS. CODE FUTURES | Ex Fide, Ad Futurum</p>
+  </footer>
+
+</body>
+</html>
